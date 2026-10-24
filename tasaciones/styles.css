@@ -1,0 +1,119 @@
+:root{--blue:#075ee8;--blue-dark:#073879;--ink:#123a63;--muted:#61758f;--line:#dbe6f2;--light:#f3f8fe;--white:#fff;--green:#138a6a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--white);letter-spacing:0}
+button,input{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ffbd35;outline-offset:3px}
+[hidden]{display:none!important}
+.container{width:min(1160px,calc(100% - 48px));margin:auto}
+.site-header{height:82px;display:flex;align-items:center;gap:54px;padding:0 max(24px,calc((100vw - 1160px)/2));background:#fff;position:relative;z-index:2}
+.brand img{display:block;width:136px;height:auto}
+.site-header nav{display:flex;align-items:center;gap:32px;flex:1;color:#466281;font-size:15px}
+.site-header nav a:hover{color:var(--blue)}
+.header-cta{position:fixed;right:24px;bottom:24px;z-index:9;min-height:54px;border:0;background:var(--blue);color:#fff;padding:13px 18px;border-radius:6px;display:flex;align-items:center;gap:9px;font-weight:700;white-space:nowrap;box-shadow:0 10px 28px rgba(7,50,120,.28)}
+.header-cta:hover{background:#064fc4}
+.header-cta svg,.primary-button svg,.small-note svg{width:18px;height:18px;flex:none}
+.hero{min-height:min(610px,72vh);background-image:linear-gradient(90deg,rgba(244,249,255,.96) 0%,rgba(244,249,255,.89) 29%,rgba(244,249,255,.53) 48%,rgba(244,249,255,0) 66%),url('./assets/migo-tecnico-apartamento.png');background-size:cover;background-position:center;display:flex;align-items:center}
+.hero-inner{width:min(1160px,calc(100% - 48px));margin:auto;padding:58px 0}
+.eyebrow{text-transform:uppercase;font-size:12px;line-height:1.3;font-weight:800;color:var(--blue);margin:0 0 17px}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(38px,4.2vw,58px);line-height:1.08;max-width:580px;margin-bottom:22px}
+.hero-copy{font-size:19px;line-height:1.55;color:#3f5e7e;max-width:520px;margin-bottom:27px}
+.primary-button{min-height:52px;border:0;border-radius:6px;background:var(--blue);color:#fff;padding:14px 21px;display:inline-flex;align-items:center;justify-content:center;gap:18px;font-weight:700;box-shadow:0 6px 16px rgba(7,94,232,.17)}
+.primary-button:hover{background:#064fc4}
+.section{padding:74px 0}
+h2{font-size:clamp(29px,3.1vw,42px);line-height:1.16;max-width:650px;margin-bottom:20px}
+h3{font-size:20px;line-height:1.28;margin-bottom:10px}
+.section p:not(.eyebrow){color:#506985;line-height:1.65;font-size:16px}
+.intro-layout,.banks-layout{display:grid;grid-template-columns:1fr 1fr;gap:8%}
+.intro-copy p{margin-bottom:18px}
+.small-note{display:flex;gap:12px;align-items:flex-start;border-left:3px solid var(--blue);padding:5px 0 5px 16px;font-size:14px!important}
+.types{background:var(--light)}
+.type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:35px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.type-grid div{min-height:96px;background:#fff;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:21px;font-weight:700}
+.type-grid svg{height:27px;width:27px;color:var(--blue);flex:none}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:40px}
+.process-grid>div{border-top:2px solid var(--line);padding-top:21px}
+.step-number{display:block;color:var(--blue);font-size:14px;font-weight:800;margin-bottom:22px}
+.process-grid p{margin-bottom:0}
+.banks{background:#edf5ff}
+.banks-layout>div>p:last-child{max-width:530px}
+.bank-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0;margin:0;align-content:center}
+.bank-list li{min-height:76px;display:flex;align-items:center;padding:16px 20px;background:#fff;border:1px solid #d6e5f5;border-radius:5px;font-weight:700;font-size:16px}
+.closing-inner{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.closing h2{margin-bottom:10px}
+.closing p:last-child{margin-bottom:0}
+.closing .primary-button{white-space:nowrap}
+.site-footer{border-top:1px solid var(--line);padding:25px 0 105px;color:var(--muted);font-size:13px}
+.site-footer .container{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.site-footer img{width:100px;height:auto}
+.site-header nav a{white-space:nowrap;border-bottom:2px solid transparent;padding:8px 0}
+.site-header nav a[aria-current="page"]{color:var(--blue);border-bottom-color:var(--blue);font-weight:700}
+.text-link{display:inline-flex;align-items:center;gap:9px;color:var(--blue);font-weight:700;margin-top:8px}
+.text-link svg{width:18px;height:18px}
+.bank-logos li{justify-content:center}
+.bank-logos li img{display:block;width:100%;max-width:200px;max-height:58px;object-fit:contain}
+.interior-hero{background:#eef6ff;padding:76px 0 68px;border-bottom:1px solid #d9e8f8}
+.interior-hero .container{max-width:1160px}
+.interior-hero h1{max-width:760px;margin-bottom:18px}
+.interior-hero p:not(.eyebrow){font-size:19px;line-height:1.55;color:#466583;max-width:690px;margin-bottom:25px}
+.service-list{margin-top:30px;border-top:1px solid #d5e3f2}
+.service-list>div{display:flex;gap:22px;padding:26px 0;border-bottom:1px solid #d5e3f2}
+.service-list svg{width:28px;height:28px;color:var(--blue);flex:none}
+.service-list h3,.service-list p{margin-bottom:5px}
+.purpose-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px;margin-top:30px}
+.purpose-grid>div{border-top:2px solid #aacff6;padding-top:22px}
+.purpose-grid svg{width:28px;height:28px;color:var(--blue);margin-bottom:18px}
+.purpose-grid p{margin-bottom:0}
+.timeline{list-style:none;padding:0;margin:35px 0 0;max-width:850px}
+.timeline li{display:grid;grid-template-columns:72px 1fr;gap:18px;padding:23px 0;border-top:1px solid #d5e3f2}
+.timeline li>span{font-weight:800;color:var(--blue);font-size:16px}
+.timeline h3{margin-bottom:7px}
+.timeline p{margin-bottom:0}
+.bank-showcase{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0 22px}
+.bank-showcase>div{border:1px solid #d8e5f4;border-radius:6px;background:#fff;min-height:160px;padding:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center}
+.bank-showcase img{max-width:min(260px,100%);max-height:72px;object-fit:contain}
+.bank-showcase h3{font-size:15px;margin:0}
+.bank-disclaimer{font-size:13px!important;max-width:920px}
+.request-flow{position:fixed;inset:0;z-index:10;background:#f8fbff;overflow:auto}
+.flow-shell{width:min(680px,calc(100% - 40px));margin:auto;min-height:100vh;display:flex;flex-direction:column}
+.flow-topbar{height:78px;display:flex;align-items:center;justify-content:space-between}
+.flow-topbar img{width:108px;height:auto}
+.icon-button{height:42px;width:42px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:6px;display:grid;place-items:center}
+.icon-button svg{height:20px;width:20px}
+.progress-label{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:13px;margin:14px 0 10px}
+.progress-track{height:5px;background:#e2eaf5;border-radius:5px;overflow:hidden}
+.progress-track span{display:block;height:100%;width:0;background:var(--blue);transition:width .25s ease}
+.flow-content{padding:45px 0 70px}
+.flow-content h2{font-size:clamp(28px,4vw,38px);margin-bottom:10px}
+.flow-help{color:var(--muted);line-height:1.5;margin-bottom:25px}
+.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.choice-button{min-height:72px;background:#fff;color:var(--ink);border:1px solid #cbdced;border-radius:6px;padding:16px 18px;display:flex;align-items:center;gap:14px;text-align:left;font-weight:700}
+.choice-button:hover{border-color:var(--blue);background:#f1f7ff}
+.choice-button svg{width:23px;height:23px;color:var(--blue);flex:none}
+.manual-trigger,.skip-button{background:none;border:0;color:var(--blue);padding:13px 0;font-weight:700}
+.manual-trigger{display:flex;align-items:center;gap:8px;margin-top:10px}
+.skip-button{color:#526e89}
+.manual-trigger svg{width:18px;height:18px}
+.manual-box{margin-top:18px}
+.field-label{display:block;font-weight:700;font-size:14px;margin-bottom:8px}
+.text-field{display:block;width:100%;min-height:52px;border:1px solid #b9cce0;border-radius:6px;background:#fff;color:var(--ink);padding:12px 14px;font-size:17px}
+.field-hint{display:block;color:var(--muted);font-size:13px;margin-top:7px}
+.flow-actions{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:22px}
+.flow-actions .primary-button{margin-left:auto}
+.contact-fields{display:grid;gap:22px;margin-top:28px}
+.contact-fields .field-group{min-width:0}
+.flow-error{color:#ad2d39;font-size:14px;min-height:20px;margin:14px 0 0}
+.privacy-note{font-size:13px;color:var(--muted);line-height:1.5;margin-top:18px}
+.request-summary{padding:17px 20px;border:1px solid var(--line);background:#fff;border-radius:6px;margin-top:24px;white-space:pre-line;color:#445e78;line-height:1.5;font-size:14px;max-height:240px;overflow:auto}
+@media(max-width:800px){.site-header{height:auto;min-height:68px;gap:10px 15px;padding:10px 20px 0;flex-wrap:wrap}.site-header nav{display:flex;order:3;width:100%;flex:none;gap:24px;overflow-x:auto;padding:4px 0 0;scrollbar-width:thin;font-size:14px}.site-header .brand{flex:1}.brand img{width:112px}.header-cta{font-size:13px;padding:10px 12px}.hero{min-height:590px;align-items:flex-start;background-image:linear-gradient(180deg,rgba(245,250,255,.98) 0%,rgba(245,250,255,.9) 40%,rgba(245,250,255,.17) 78%),url('./assets/migo-tecnico-apartamento.png');background-position:84% center}.hero-inner{padding:45px 0}.hero-copy{max-width:490px}.intro-layout,.banks-layout{grid-template-columns:1fr;gap:20px}.process-grid{gap:24px}.section{padding:60px 0}.purpose-grid{gap:18px}}
+@media(max-width:600px){.container,.hero-inner{width:calc(100% - 36px)}.hero{height:min(590px,calc(100svh - 145px));min-height:430px;background-position:84% center}.hero-inner{padding-top:36px}h1{font-size:34px;max-width:430px}.hero-copy{font-size:16px;max-width:390px}.type-grid{grid-template-columns:1fr 1fr}.type-grid div{padding:14px;min-height:78px;gap:10px;font-size:14px}.type-grid svg{width:22px;height:22px}.process-grid,.purpose-grid{grid-template-columns:1fr;gap:22px}.process-grid>div{padding-top:14px}.step-number{margin-bottom:12px}.bank-list{grid-template-columns:1fr}.bank-list li{min-height:68px}.bank-showcase{grid-template-columns:1fr}.closing-inner{display:block}.closing .primary-button{margin-top:22px}.site-footer .container{align-items:flex-start;flex-direction:column}.flow-shell{width:calc(100% - 32px)}.flow-content{padding-top:35px}.choice-grid{grid-template-columns:1fr}.choice-button{min-height:60px}.flow-actions{flex-wrap:wrap}.flow-actions .primary-button{min-width:100%}.header-cta{right:16px;bottom:16px;font-size:14px}.header-cta svg{display:inline-block}.interior-hero{padding:54px 0}.interior-hero p:not(.eyebrow){font-size:16px}.timeline li{grid-template-columns:43px 1fr;gap:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.progress-track span{transition:none}}
+ .referral-banner{display:inline-block;margin-top:18px;padding:9px 13px;border:1px solid #aad0ff;border-radius:5px;background:#ffffffde;color:#0753c5;font-size:13px;font-weight:700}
+@media(max-width:1250px){.site-header{height:auto;min-height:72px;gap:8px 20px;padding:10px 20px 0;flex-wrap:wrap}.site-header .brand{flex:1}.site-header nav{display:flex;order:3;width:100%;flex:none;gap:24px;overflow-x:auto;padding:4px 0 0;scrollbar-width:thin;font-size:14px}.site-header .header-cta{margin-left:auto}}
+.contact-consent{display:flex;align-items:flex-start;gap:9px;margin-top:16px;color:#486889;font-size:13px;line-height:1.4}.contact-consent input{flex:none;width:17px;height:17px;accent-color:#075ee8;margin:1px 0 0}
+.login-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex:none;padding:10px 16px;border:1px solid #9ec6ff;border-radius:6px;color:#075ee8;font-size:14px;font-weight:700;white-space:nowrap;text-decoration:none}.login-button:hover{background:#edf5ff}.login-button svg{width:17px;height:17px}
+@media(max-width:1250px){.site-header .login-button{order:2;margin-left:auto}}
+@media(max-width:600px){.login-button{font-size:12px;padding:8px 9px}.login-button svg{width:15px;height:15px}}
