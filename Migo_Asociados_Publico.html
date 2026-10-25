@@ -47,6 +47,7 @@ button { cursor: pointer; }
 .case-row-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .case-row-top strong { color: #173f66; font-size: 14px; }
 .case-row p { color: #708ca6; margin: 6px 0 10px; font-size: 12px; }
+.case-phone { display: inline-block; color: #075ee8; font-size: 12px; font-weight: 700; margin-bottom: 9px; text-decoration: none; }
 .case-status { color: #9b6618; background: #fff4dd; padding: 4px 7px; border-radius: 4px; font-size: 10px; font-weight: 800; }
 .case-status.is-sent { color: #267251; background: #e6f7ed; }
 .case-tags { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -76,10 +77,35 @@ button { cursor: pointer; }
 .earnings-disclaimer { color: #7993aa; font-size: 12px; line-height: 1.5; margin-top: 24px; }
 .workspace-return { display: inline-flex; gap: 7px; align-items: center; border: 0; background: transparent; color: #075ee8; font: inherit; font-size: 12px; font-weight: 800; padding: 0; }
 .workspace-return svg { width: 17px; }
+.handoff-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 25px 0; }
+.handoff-summary > div { min-width: 0; padding: 16px; background: #f2f7fb; border: 1px solid #dce8f3; border-radius: 6px; }
+.handoff-summary small, .handoff-summary strong, .handoff-summary span { display: block; overflow-wrap: anywhere; }
+.handoff-summary small { color: #6f8aa3; font-size: 11px; text-transform: uppercase; font-weight: 800; }
+.handoff-summary strong { color: #173f66; font-size: 15px; margin: 6px 0; }
+.handoff-summary span { color: #6785a0; font-size: 12px; line-height: 1.4; }
+.office-banner { display: flex; gap: 12px; margin: 23px 0; padding: 17px; background: #edf6ff; border-left: 3px solid #075ee8; }
+.office-banner svg { flex-shrink: 0; color: #075ee8; width: 21px; }
+.office-banner strong, .office-banner span { display: block; }
+.office-banner strong { color: #173f66; font-size: 14px; }
+.office-banner span { color: #617f99; font-size: 12px; line-height: 1.5; margin-top: 4px; }
+.office-form { margin: 20px 0; }
+.office-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+.office-grid.compensation { border-top: 1px solid #dce8f3; margin: 23px 0 15px; padding-top: 23px; }
+.office-grid label { display: grid; gap: 7px; color: #214a70; font-size: 12px; font-weight: 700; }
+.office-grid input:not([type=checkbox]) { width: 100%; min-height: 45px; border: 1px solid #cbdceb; border-radius: 6px; padding: 9px 11px; color: #173f66; background: #fff; font: inherit; }
+.office-grid input:disabled { background: #eef3f7; color: #91a3b3; }
+.office-grid .office-check { display: flex; align-items: center; gap: 9px; min-height: 45px; }
+.office-check input { width: 18px; height: 18px; accent-color: #075ee8; }
+.office-next { border-top: 1px solid #dce8f3; padding: 22px 0 4px; margin-top: 22px; }
+.office-next strong { color: #173f66; }
+.office-next p { color: #6f8aa3; font-size: 13px; line-height: 1.5; }
+.photo-category-label { display: block; margin-top: 25px; font-size: 12px; color: #214a70; font-weight: 700; }
+#photo-category { width: min(100%, 350px); min-height: 43px; border: 1px solid #cbdceb; border-radius: 6px; padding: 8px 11px; background: #fff; color: #173f66; font: inherit; margin: 8px 0 18px; }
+.phase-link:disabled { opacity: .48; cursor: not-allowed; }
 .mobile-nav { display: none; }
 .global-toast { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); z-index: 10; max-width: min(420px, calc(100vw - 24px)); padding: 11px 15px; border-radius: 6px; background: #173f66; color: #fff; box-shadow: 0 8px 28px #173f6640; font-size: 12px; text-align: center; }
 @media (max-width: 800px) { .dashboard-columns { grid-template-columns: 1fr; } }
-@media (max-width: 600px) { .desktop-nav { display: none; } .dashboard-view { padding: 24px 16px 100px; } .dashboard-heading { align-items: start; flex-direction: column; gap: 13px; } .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; } .summary-stat { padding: 13px; } .summary-stat:nth-child(3) { grid-column: 1 / -1; } .summary-stat strong { font-size: 20px; } .case-row { flex-direction: column; gap: 10px; } .case-row-side { display: flex; align-items: center; justify-content: space-between; gap: 8px; text-align: left; width: 100%; } .case-row-side small { display: none; } .list-toolbar { flex-direction: column; } .case-search { width: 100%; } .mobile-nav { position: fixed; bottom: 0; left: 0; right: 0; z-index: 5; display: grid; grid-template-columns: repeat(3, 1fr); background: #fff; border-top: 1px solid #dce8f3; padding: 8px 6px calc(8px + env(safe-area-inset-bottom)); } .mobile-nav button { display: grid; justify-items: center; gap: 3px; border: 0; background: none; color: #829bb0; font: inherit; font-size: 10px; font-weight: 700; } .mobile-nav button.active { color: #075ee8; } .mobile-nav svg { width: 19px; height: 19px; } .access-shell { padding: 26px 20px; } .global-toast { bottom: 72px; } }
+@media (max-width: 600px) { .desktop-nav { display: none; } .dashboard-view { padding: 24px 16px 100px; } .dashboard-heading { align-items: start; flex-direction: column; gap: 13px; } .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; } .summary-stat { padding: 13px; } .summary-stat:nth-child(3) { grid-column: 1 / -1; } .summary-stat strong { font-size: 20px; } .case-row { flex-direction: column; gap: 10px; } .case-row-side { display: flex; align-items: center; justify-content: space-between; gap: 8px; text-align: left; width: 100%; } .case-row-side small { display: none; } .list-toolbar { flex-direction: column; } .case-search { width: 100%; } .handoff-summary, .office-grid { grid-template-columns: 1fr; } .mobile-nav { position: fixed; bottom: 0; left: 0; right: 0; z-index: 5; display: grid; grid-template-columns: repeat(3, 1fr); background: #fff; border-top: 1px solid #dce8f3; padding: 8px 6px calc(8px + env(safe-area-inset-bottom)); } .mobile-nav button { display: grid; justify-items: center; gap: 3px; border: 0; background: none; color: #829bb0; font: inherit; font-size: 10px; font-weight: 700; } .mobile-nav button.active { color: #075ee8; } .mobile-nav svg { width: 19px; height: 19px; } .access-shell { padding: 26px 20px; } .global-toast { bottom: 72px; } }
 @media print { .access-view, .desktop-nav, .dashboard-view, .mobile-nav, .workspace-return, .global-toast { display: none !important; } #app-shell, #case-workspace { display: block !important; } }
 </style>
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
@@ -91,7 +117,8 @@ button { cursor: pointer; }
   const OFFICE_WHATSAPP = "18294977679";
   const phases = [
     { id: "capture", label: "Captación", title: "Datos del cliente" },
-    { id: "visit", label: "Visita", title: "Coordinación" },
+    { id: "office", label: "Oficina", title: "Coordinación de visita" },
+    { id: "visit", label: "Ubicación", title: "Ubicación y entorno" },
     { id: "inspection", label: "Inspección", title: "Levantamiento técnico" },
     { id: "evidence", label: "Evidencia", title: "Soportes y comparables" },
     { id: "review", label: "Informe", title: "Revisión final" },
@@ -102,7 +129,7 @@ button { cursor: pointer; }
   const formatDate = value => value ? new Date(`${value}T12:00:00`).toLocaleDateString("es-DO", { day: "2-digit", month: "long", year: "numeric" }) : "Pendiente";
   const number = value => Number(value || 0).toLocaleString("es-DO", { maximumFractionDigits: 2 });
   const uid = () => crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-  const newCase = profile => ({ id: `MIGO-${new Date().toISOString().slice(0, 10).replaceAll("-", "")}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString(), answers: profile?.name ? { associateName: profile.name } : {}, comparables: [], stepId: "workMode", reportOpen: false, sentAt: null });
+  const newCase = profile => ({ id: `MIGO-${new Date().toISOString().slice(0, 10).replaceAll("-", "")}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`, createdAt: new Date().toISOString(), updatedAt: new Date().toISOString(), answers: profile?.name ? { associateName: profile.name } : {}, comparables: [], stage: "capture", stepId: "workMode", reportOpen: false, captureSubmittedAt: null, coordinationConfirmedAt: null, inspectionStartedAt: null, sentAt: null });
   let store;
   try { store = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null"); } catch { store = null; }
   if (!store || !Array.isArray(store.cases)) {
@@ -111,6 +138,13 @@ button { cursor: pointer; }
     store = { profile: null, cases: legacy?.answers && Array.isArray(legacy.comparables) ? [{ ...legacy, updatedAt: legacy.createdAt, sentAt: null }] : [], activeCaseId: legacy?.id || null, month: new Date().toISOString().slice(0, 7) };
   }
   let state = store.cases.find(item => item.id === store.activeCaseId) || null;
+  for (const item of store.cases) {
+    if (!item.stage) {
+      item.stage = item.reportOpen || ["visit", "inspection", "evidence", "review"].some(phase => questionsPhase(item.stepId) === phase) ? "inspection" : "capture";
+      if (item.stage === "inspection") item.legacyInspection = true;
+    }
+  }
+  function questionsPhase(id) { return ["address", "visitDate", "siteContact", "access", "coordinates"].includes(id) ? "visit" : ["documents", "comparables", "photos"].includes(id) ? "evidence" : id === "review" ? "review" : ["workMode", "associateName", "associateCode", "captureFee", "inspectionFee", "amountReceived", "source", "clientName", "clientPhone", "consent", "clientEmail", "purpose", "propertyType", "city", "sector"].includes(id) ? "capture" : "inspection"; }
   let answers = state?.answers || {};
   let currentView = "access";
   let photos = [];
@@ -119,18 +153,15 @@ button { cursor: pointer; }
   let noticeTimer;
 
   const type = () => answers.propertyType || "";
-  const landOnly = () => /solar|terreno/i.test(type());
+  const landOnly = () => /solar|terreno|finca/i.test(type());
   const apartment = () => /apartamento/i.test(type());
   const built = () => answers.hasBuilding === "No" ? false : !landOnly() || answers.hasBuilding === "Sí";
   const captureOnly = () => answers.workMode === "Solo captación";
 
   const questions = [
-    { id: "workMode", phase: "capture", label: "Participación", title: "¿Qué trabajo realizarás en este caso?", choices: ["Captación + inspección", "Solo captación", "Solo inspección"], required: true },
+    { id: "workMode", phase: "capture", label: "Participación", title: "¿Captarás al cliente, inspeccionarás la propiedad o harás ambas tareas?", choices: ["Captación + inspección", "Solo captación", "Solo inspección"], required: true, help: "Si tú también visitarás la propiedad, indícalo ahora. La oficina confirmará la asignación antes de la visita." },
     { id: "associateName", phase: "capture", label: "Asociado", title: "¿Quién está gestionando este caso?", type: "text", required: true, placeholder: "Nombre y apellido del asociado" },
     { id: "associateCode", phase: "capture", label: "Código del asociado", title: "¿Tienes un código de referido?", type: "text", placeholder: "Ej. MIGO-AB12CD34" },
-    { id: "captureFee", phase: "capture", label: "Ingreso por captación", title: "¿Qué monto tienes acordado por captar al cliente?", type: "number", unit: "RD$", when: () => answers.workMode !== "Solo inspección", help: "Registra el monto acordado para estimar tus ingresos. La oficina confirmará el pago real." },
-    { id: "inspectionFee", phase: "capture", label: "Ingreso por inspección", title: "¿Qué monto tienes acordado por inspeccionar el inmueble?", type: "number", unit: "RD$", when: () => answers.workMode !== "Solo captación", help: "Registra el monto acordado para estimar tus ingresos. La oficina confirmará el pago real." },
-    { id: "amountReceived", phase: "capture", label: "Monto recibido", title: "¿Cuánto has recibido hasta ahora por este caso?", type: "number", unit: "RD$", help: "Puedes dejarlo vacío y actualizarlo cuando se registre un pago." },
     { id: "source", phase: "capture", label: "Origen", title: "¿Cómo llegó este cliente?", choices: ["Lo capté directamente", "Asignado por la oficina", "Referido por otra persona"], custom: true },
     { id: "clientName", phase: "capture", label: "Cliente", title: "¿Cuál es el nombre del cliente?", type: "text", required: true, placeholder: "Nombre completo" },
     { id: "clientPhone", phase: "capture", label: "Celular", title: "¿A qué número podemos llamarlo?", type: "tel", required: true, placeholder: "809 000 0000" },
@@ -140,11 +171,19 @@ button { cursor: pointer; }
     { id: "propertyType", phase: "capture", label: "Inmueble", title: "¿Qué tipo de inmueble vamos a inspeccionar?", choices: ["Casa", "Apartamento", "Villa", "Solar", "Finca", "Local comercial", "Edificio", "Nave industrial"], custom: true, required: true },
     { id: "city", phase: "capture", label: "Provincia o municipio", title: "¿Dónde está el inmueble?", choices: ["Distrito Nacional", "Santo Domingo Este", "Santo Domingo Norte", "Santo Domingo Oeste", "Santiago", "La Vega", "Punta Cana / Bávaro"], custom: true, required: true },
     { id: "sector", phase: "capture", label: "Sector", title: "¿En qué sector está ubicado?", type: "text", required: true, placeholder: "Sector, comunidad o paraje" },
+    { id: "captureReview", phase: "capture", label: "Enviar a oficina", title: "Perfil del cliente listo para contactar", type: "captureReview", help: "Revisa los datos, comparte la ficha con la oficina y registra que fue enviada." },
+    { id: "office", phase: "office", label: "Oficina", title: "Coordinación confirmada por la oficina", type: "office", help: "La visita solo inicia después de acordar fecha, hora, precio e inspector con el cliente." },
+    { id: "captureFee", phase: "officeMeta", label: "Ingreso por captación", type: "number", unit: "RD$" },
+    { id: "inspectionFee", phase: "officeMeta", label: "Ingreso por inspección", type: "number", unit: "RD$" },
+    { id: "amountReceived", phase: "officeMeta", label: "Monto recibido", type: "number", unit: "RD$" },
     { id: "address", phase: "visit", label: "Dirección", title: "¿Cuál es la dirección o referencia exacta?", type: "textarea", required: true, placeholder: "Calle, número, edificio, referencias de acceso" },
-    { id: "visitDate", phase: "visit", label: "Fecha de visita", title: "¿Cuándo se realizará la inspección?", type: "date" },
     { id: "siteContact", phase: "visit", label: "Contacto en sitio", title: "¿Quién abrirá el inmueble?", type: "text", placeholder: "Nombre y teléfono de contacto" },
     { id: "access", phase: "visit", label: "Acceso", title: "¿Cómo se accede al inmueble?", choices: ["Vía pública pavimentada", "Vía pública sin pavimentar", "Acceso privado", "Acceso rural"], custom: true },
     { id: "coordinates", phase: "visit", label: "Ubicación GPS", title: "¿Puedes registrar la ubicación exacta?", type: "geo", placeholder: "Latitud, longitud o enlace de mapa" },
+    { id: "neighborhood", phase: "visit", label: "Entorno", title: "¿Cómo es el entorno inmediato?", choices: ["Residencial consolidado", "Comercial", "Mixto", "En desarrollo", "Rural"], custom: true },
+    { id: "nearby", phase: "visit", label: "Servicios cercanos", title: "¿Qué servicios y lugares hay próximos?", type: "multi", choices: ["Plazas comerciales", "Supermercados", "Escuelas", "Centros de salud", "Transporte público", "Bancos", "Parques"], custom: true },
+    { id: "highestUse", phase: "visit", label: "Mejor uso", title: "¿Cuál parece ser el uso de mayor provecho del inmueble?", choices: ["Residencial", "Comercial", "Mixto", "Industrial", "Agrícola", "Por determinar"], custom: true, help: "Es una observación preliminar; la oficina validará uso de suelo, normativa y mercado." },
+    { id: "neighborhoodNotes", phase: "visit", label: "Observaciones del lugar", title: "¿Qué debes destacar de la ubicación y el acceso?", type: "textarea", placeholder: "Servicios, tránsito, ruidos, pendientes, inundabilidad visible, calles, proximidad..." },
     { id: "occupancy", phase: "inspection", label: "Ocupación", title: "¿El inmueble está ocupado?", choices: ["Desocupado", "Ocupado por propietario", "Alquilado", "En construcción"], custom: true },
     { id: "landArea", phase: "inspection", label: "Terreno", title: "¿Cuántos m² de terreno tiene?", type: "number", unit: "m²", when: () => !apartment() },
     { id: "hasBuilding", phase: "inspection", label: "Construcciones", title: "¿Hay edificaciones en el terreno?", choices: ["Sí", "No"], when: () => landOnly() || /finca/i.test(type()) },
@@ -157,20 +196,35 @@ button { cursor: pointer; }
     { id: "parkingCount", phase: "inspection", label: "Parqueos", title: "¿Cuántos parqueos tiene?", choices: ["No tiene", "1", "2", "3", "4 o más"], custom: true, when: built },
     { id: "parkingType", phase: "inspection", label: "Tipo de parqueo", title: "¿Cómo son los parqueos?", choices: ["Techados", "Destechados", "Mixtos"], custom: true, when: () => built() && answers.parkingCount && answers.parkingCount !== "No tiene" },
     { id: "parkingArea", phase: "inspection", label: "Área de parqueo", title: "¿Cuál es el área total de parqueo?", type: "number", unit: "m²", when: () => built() && answers.parkingCount && answers.parkingCount !== "No tiene" },
+    { id: "intercom", phase: "inspection", label: "Intercom", title: "¿Cuenta con intercomunicador?", choices: ["Sí", "No", "No verificado"], when: built },
+    { id: "waterStorage", phase: "inspection", label: "Almacenamiento de agua", title: "¿Qué sistemas de almacenamiento de agua tiene?", type: "multi", choices: ["Tinaco", "Cisterna", "Pozo", "Bomba de agua", "Ninguno visible"], custom: true, when: built },
+    { id: "waterStorageDetails", phase: "inspection", label: "Capacidad de agua", title: "¿Qué capacidad o estado tienen el tinaco y la cisterna?", type: "textarea", placeholder: "Cantidad de tinacos, capacidad aproximada, bomba, estado observado", when: built },
+    { id: "security", phase: "inspection", label: "Seguridad", title: "¿Qué elementos de seguridad observaste?", type: "multi", choices: ["Control de acceso", "Portón eléctrico", "Cámaras", "Vigilancia", "Cerramiento perimetral", "Sistema de alarma", "Ninguno visible"], custom: true },
+    { id: "elevator", phase: "inspection", label: "Ascensor", title: "¿Hay ascensor y cuál es su estado?", choices: ["No aplica", "Operativo", "Fuera de servicio", "No verificado"], custom: true, when: built },
+    { id: "socialArea", phase: "inspection", label: "Área social", title: "¿Qué incluye el área social?", type: "multi", choices: ["No tiene", "Salón multiusos", "Terraza", "Piscina", "Gimnasio", "Área infantil", "Jardín", "Gazebo"], custom: true, when: built },
     { id: "structure", phase: "inspection", label: "Estructura", title: "¿Cuál es el sistema constructivo principal?", choices: ["Hormigón armado", "Mampostería", "Estructura metálica", "Madera", "Mixto"], custom: true, when: built },
     { id: "roof", phase: "inspection", label: "Cubierta", title: "¿Qué tipo de techo o cubierta tiene?", choices: ["Losa de hormigón", "Aluzinc", "Tejas", "Zinc"], custom: true, when: built },
+    { id: "floorFinish", phase: "inspection", label: "Pisos", title: "¿De qué material son los pisos?", choices: ["Porcelanato", "Cerámica", "Mármol", "Granito", "Madera", "Cemento pulido", "Mixto"], custom: true, when: built },
+    { id: "kitchenWood", phase: "inspection", label: "Madera de cocina", title: "¿Qué material o madera tiene la cocina?", choices: ["Caoba", "Pino", "Roble", "MDF / melamina", "No aplica", "No verificado"], custom: true, when: built },
+    { id: "kitchenFinish", phase: "inspection", label: "Cocina", title: "¿Cómo son las terminaciones de la cocina?", type: "textarea", placeholder: "Gabinetes, tope, revestimientos, estado y materiales", when: built },
     { id: "finishes", phase: "inspection", label: "Terminaciones", title: "¿Cómo describirías las terminaciones?", choices: ["Básicas", "Estándar", "Buenas", "Alta gama", "Sin terminar"], custom: true, when: built },
+    { id: "finishDetails", phase: "inspection", label: "Detalle de terminaciones", title: "¿Qué materiales y acabados destacan?", type: "textarea", placeholder: "Puertas, ventanas, revestimientos, baños, techos, pintura y carpintería", when: built },
     { id: "condition", phase: "inspection", label: "Conservación", title: "¿Cuál es el estado de conservación?", choices: ["Excelente", "Bueno", "Regular", "Requiere reparaciones", "En construcción"], custom: true, required: true },
+    { id: "defects", phase: "inspection", label: "Daños visibles", title: "¿Observaste daños o señales de deterioro?", type: "multi", choices: ["Sin daños visibles", "Grietas", "Fisuras", "Humedad", "Filtraciones", "Desprendimientos", "Corrosión", "Instalaciones deterioradas"], custom: true },
+    { id: "defectDetails", phase: "inspection", label: "Ubicación de daños", title: "¿Dónde están y cómo se observan esos hallazgos?", type: "textarea", placeholder: "Ubicación, extensión aproximada, fotos relacionadas y limitaciones de inspección" },
     { id: "utilities", phase: "inspection", label: "Servicios", title: "¿Qué servicios observaste?", type: "multi", choices: ["Agua potable", "Energía eléctrica", "Alcantarillado", "Internet", "Pozo", "Planta eléctrica", "Cisterna"], custom: true },
     { id: "amenities", phase: "inspection", label: "Amenidades", title: "¿Qué otras características tiene?", type: "multi", choices: ["Balcón", "Terraza", "Patio", "Piscina", "Ascensor", "Seguridad", "Área social", "Jardín"], custom: true },
     { id: "observations", phase: "inspection", label: "Observaciones", title: "¿Qué hallazgos deben conocer en la oficina?", type: "textarea", placeholder: "Estado físico, daños visibles, ampliaciones, acceso, diferencias observadas..." },
     { id: "documents", phase: "evidence", label: "Documentos", title: "¿Qué documentos te mostraron?", type: "multi", choices: ["Copia de título", "Plano o mensura", "Cédula del propietario", "Certificación de IPI", "Certificación de no gravamen", "Contrato de compra", "Ninguno"], custom: true, help: "Registra solo lo recibido o visto; la verificación legal corresponde a la oficina." },
     { id: "comparables", phase: "evidence", label: "Mercado", title: "Agrega inmuebles comparables de la zona", type: "comparables", help: "Incluye fuente y precio solicitado cuando tengas referencias verificables." },
-    { id: "photos", phase: "evidence", label: "Fotografías", title: "Carga fotos de la inspección", type: "photos", help: "Fachada, interiores, entorno y cualquier hallazgo relevante. Máximo 8 imágenes." },
+    { id: "photos", phase: "evidence", label: "Fotografías", title: "Carga las fotos tomadas en la propiedad", type: "photos", help: "Clasifica fachada, entorno, habitaciones, baños, cocina, instalaciones, área social y daños. Máximo 24 imágenes." },
     { id: "review", phase: "review", label: "Revisión", title: "Revisa el levantamiento antes de generar el informe", type: "review" },
   ];
 
-  const visible = () => questions.filter(question => (!captureOnly() || question.phase === "capture" || question.phase === "review") && (!question.when || question.when()));
+  const visible = () => questions.filter(question => {
+    const phaseAllowed = state.stage === "capture" ? question.phase === "capture" : state.stage === "office" ? question.phase === "office" : ["visit", "inspection", "evidence", "review"].includes(question.phase);
+    return phaseAllowed && (!question.when || question.when());
+  });
   const current = () => visible().find(question => question.id === state.stepId) || visible()[0];
   const save = () => {
     if (state) state.updatedAt = new Date().toISOString();
@@ -213,6 +267,8 @@ button { cursor: pointer; }
     const value = answers[question.id];
     const top = `<p class="question-kicker">${esc(question.label)}</p><h1 tabindex="-1">${esc(typeof question.title === "function" ? question.title() : question.title)}</h1><p class="question-help">${esc(question.help || (question.required ? "Este dato ayuda a completar el expediente de inspección." : "Puedes continuar sin responder y completar este dato después."))}</p>`;
     if (question.type === "review") return top + reviewHtml();
+    if (question.type === "captureReview") return top + captureReviewHtml();
+    if (question.type === "office") return top + officeHtml();
     if (question.type === "comparables") return top + comparableHtml();
     if (question.type === "photos") return top + photosHtml();
     if (question.type === "geo") return top + `<div class="geo-actions"><button type="button" class="secondary-button" data-geolocate><i data-lucide="map-pin"></i> Usar ubicación actual</button></div><form class="answer-form" data-answer-form><label for="answer-input">Coordenadas o enlace del mapa</label><input id="answer-input" name="answer" value="${esc(value || "")}" placeholder="${esc(question.placeholder)}"><p class="field-error" id="field-error" role="alert"></p><div class="question-actions"><button class="primary-button">Continuar <i data-lucide="arrow-right"></i></button><button type="button" class="skip-button" data-skip>Continuar sin este dato</button></div></form>`;
@@ -240,11 +296,26 @@ button { cursor: pointer; }
   }
 
   function photosHtml() {
-    return `<label class="upload-box"><i data-lucide="camera"></i> Seleccionar fotografías<small>JPG, PNG o WebP. Se guardan solo en este dispositivo.</small><input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" multiple></label>${!photoDb ? `<p class="multi-note">Este navegador no permite guardar fotos entre sesiones. Comparte el informe antes de cerrar esta página.</p>` : ""}<div class="photo-grid">${photos.map(photo => `<div class="photo-item"><img src="${photo.url}" alt="Fotografía de ${esc(photo.name)}"><span>${esc(photo.name)}</span><button type="button" data-delete-photo="${esc(photo.id)}" title="Eliminar foto" aria-label="Eliminar foto"><i data-lucide="x"></i></button></div>`).join("")}</div><p class="field-error" id="photo-error" role="alert"></p><div class="question-actions"><button class="primary-button" data-next>Continuar <i data-lucide="arrow-right"></i></button></div>`;
+    return `<label class="photo-category-label" for="photo-category">Área fotografiada</label><select id="photo-category"><option>Fachada y acceso</option><option>Entorno</option><option>Habitaciones</option><option>Baños</option><option>Cocina</option><option>Parqueos</option><option>Instalaciones</option><option>Área social</option><option>Daños y hallazgos</option><option>Otros espacios</option></select><label class="upload-box"><i data-lucide="camera"></i> Seleccionar fotografías<small>JPG, PNG o WebP. Elige el área antes de cargar cada grupo. Se guardan solo en este dispositivo.</small><input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" multiple></label>${!photoDb ? `<p class="multi-note">Este navegador no permite guardar fotos entre sesiones. Comparte el informe antes de cerrar esta página.</p>` : ""}<div class="photo-grid">${photos.map(photo => `<div class="photo-item"><img src="${photo.url}" alt="Fotografía de ${esc(photo.category || photo.name)}"><span>${esc(photo.category || "Sin clasificar")} · ${esc(photo.name)}</span><button type="button" data-delete-photo="${esc(photo.id)}" title="Eliminar foto" aria-label="Eliminar foto"><i data-lucide="x"></i></button></div>`).join("")}</div><p class="field-error" id="photo-error" role="alert"></p><div class="question-actions"><button class="primary-button" data-next>Continuar <i data-lucide="arrow-right"></i></button></div>`;
+  }
+
+  function captureMissing() {
+    return questions.filter(question => question.phase === "capture" && question.required && !answers[question.id]);
+  }
+
+  function captureReviewHtml() {
+    const missing = captureMissing();
+    return `<div class="handoff-summary"><div><small>Cliente</small><strong>${esc(answers.clientName || "Pendiente")}</strong><span>${esc(answers.clientPhone || "Sin celular")}</span></div><div><small>Inmueble</small><strong>${esc(answers.propertyType || "Pendiente")}</strong><span>${esc([answers.sector, answers.city].filter(Boolean).join(", ") || "Ubicación pendiente")}</span></div><div><small>Participación indicada</small><strong>${esc(answers.workMode || "Pendiente")}</strong><span>La oficina confirmará quién realiza la visita.</span></div></div>${missing.map(question => `<div class="review-item missing"><span>Pendiente: <strong>${esc(question.label)}</strong></span><button class="small-button" data-edit="${question.id}">Completar</button></div>`).join("")}<div class="question-actions"><button type="button" class="secondary-button" data-capture-whatsapp><i data-lucide="message-circle"></i> Abrir WhatsApp de oficina</button><button type="button" class="primary-button" data-submit-capture>Ya envié la ficha <i data-lucide="arrow-right"></i></button></div><p class="multi-note">La oficina contactará al cliente, acordará el monto a pagar y confirmará fecha, hora e inspector. Marcar la ficha como enviada no envía datos automáticamente.</p>`;
+  }
+
+  function officeHtml() {
+    const a = answers;
+    const self = a.workMode === "Captación + inspección" || a.workMode === "Solo inspección";
+    return `<div class="office-banner"><i data-lucide="phone-call"></i><div><strong>${state.captureSubmittedAt ? "Ficha registrada para la oficina" : "Esperando ficha del cliente"}</strong><span>La oficina contacta al cliente y confirma las condiciones de la visita. Registra aquí solo lo que ya fue acordado.</span></div></div><form id="office-form" class="office-form"><div class="office-grid"><label>Fecha acordada<input name="visitDate" type="date" value="${esc(a.visitDate || "")}" required></label><label>Hora acordada<input name="visitTime" type="time" value="${esc(a.visitTime || "")}" required></label><label>Monto a pagar por el cliente (RD$)<input name="clientPrice" type="number" min="0" step="any" value="${esc(a.clientPrice || "")}" required></label><label>Inspector asignado<input name="inspectorName" value="${esc(a.inspectorName || (self ? a.associateName || "" : ""))}" required></label><label class="office-check"><input name="assignedToMe" type="checkbox" ${a.assignedToMe === "Sí" || (!a.coordinationConfirmedAt && self) ? "checked" : ""}> Yo realizaré esta inspección</label></div><div class="office-grid compensation"><label>Mi ingreso por captación (RD$)<input name="captureFee" type="number" min="0" step="any" value="${esc(a.captureFee || "")}" ${a.workMode === "Solo inspección" ? "disabled" : ""}></label><label>Mi ingreso por inspección (RD$)<input name="inspectionFee" type="number" min="0" step="any" value="${esc(a.inspectionFee || "")}" ${a.workMode === "Solo captación" ? "disabled" : ""}></label><label>Monto que he recibido (RD$)<input name="amountReceived" type="number" min="0" step="any" value="${esc(a.amountReceived || "")}"></label></div><p id="office-error" class="field-error" role="alert"></p><button class="primary-button" type="submit"><i data-lucide="check"></i> Guardar coordinación confirmada</button></form>${state.coordinationConfirmedAt ? `<div class="office-next"><strong>Visita coordinada</strong><p>${esc(formatDate(a.visitDate))} a las ${esc(a.visitTime || "hora pendiente")} · Inspector: ${esc(a.inspectorName || "pendiente")}</p>${a.assignedToMe === "Sí" ? `<button type="button" class="primary-button" data-start-inspection><i data-lucide="clipboard-list"></i> Iniciar inspección en la propiedad</button>` : `<p>La inspección está asignada a otra persona. Esta ficha permanece disponible para seguimiento.</p>`}</div>` : ""}<div class="question-actions"><button type="button" class="secondary-button" data-back-capture>Editar perfil del cliente</button><button type="button" class="secondary-button" data-view="dashboard">Volver al tablero</button></div>`;
   }
 
   function pending() {
-    const required = visible().filter(question => question.required);
+    const required = questions.filter(question => question.required && (question.phase === "capture" || visible().includes(question)));
     const missing = required.filter(question => !answers[question.id]);
     if (!captureOnly() && !photos.length) missing.push({ id: "photos", label: "Fotografías" });
     if (answers.consent === "No") missing.push({ id: "consent", label: "Autorización del cliente" });
@@ -262,7 +333,7 @@ button { cursor: pointer; }
   const received = item => Number(item.answers.amountReceived || 0);
   const currency = value => `RD$ ${number(value)}`;
   const monthCases = () => store.cases.filter(item => item.createdAt.slice(0, 7) === store.month).sort((a, b) => (b.updatedAt || b.createdAt).localeCompare(a.updatedAt || a.createdAt));
-  const caseStatus = item => item.sentAt ? "Enviado" : item.reportOpen ? (item.answers.workMode === "Solo captación" ? "Ficha lista" : "Informe listo") : item.stepId === "workMode" ? "Nuevo" : "En proceso";
+  const caseStatus = item => item.sentAt ? "Informe enviado" : item.reportOpen ? "Informe listo" : item.stage === "inspection" ? "En inspección" : item.coordinationConfirmedAt ? "Visita acordada" : item.captureSubmittedAt ? "Pendiente de oficina" : item.stepId === "workMode" ? "Nuevo" : "Captación en curso";
   const monthTitle = () => new Date(`${store.month}-01T12:00:00`).toLocaleDateString("es-DO", { month: "long", year: "numeric" });
 
   function showView(view) {
@@ -283,7 +354,8 @@ button { cursor: pointer; }
   function caseRow(item) {
     const parts = item.answers;
     const status = caseStatus(item);
-    return `<article class="case-row"><div class="case-row-main"><div class="case-row-top"><strong>${esc(parts.clientName || "Cliente sin nombre")}</strong><span class="case-status ${status === "Enviado" ? "is-sent" : ""}">${esc(status)}</span></div><p>${esc([parts.propertyType, parts.sector, parts.city].filter(Boolean).join(" · ") || "Inmueble por completar")}</p><div class="case-tags"><span>${esc(parts.workMode || "Participación pendiente")}</span><span>${esc(item.id)}</span></div></div><div class="case-row-side"><strong>${currency(expected(item))}</strong><small>${currency(received(item))} recibido</small><button type="button" class="text-action" data-open-case="${esc(item.id)}">Abrir caso <i data-lucide="arrow-right"></i></button></div></article>`;
+    const schedule = parts.visitDate ? `${formatDate(parts.visitDate)}${parts.visitTime ? ` · ${parts.visitTime}` : ""}` : "Visita pendiente";
+    return `<article class="case-row"><div class="case-row-main"><div class="case-row-top"><strong>${esc(parts.clientName || "Cliente sin nombre")}</strong><span class="case-status ${item.sentAt ? "is-sent" : ""}">${esc(status)}</span></div><p>${esc([parts.propertyType, parts.sector, parts.city].filter(Boolean).join(" · ") || "Inmueble por completar")} · ${esc(schedule)}</p>${parts.clientPhone ? `<a class="case-phone" href="tel:${esc(parts.clientPhone.replace(/[^\d+]/g, ""))}">${esc(parts.clientPhone)}</a>` : ""}<div class="case-tags"><span>${esc(parts.workMode || "Participación pendiente")}</span>${parts.inspectorName ? `<span>Inspector: ${esc(parts.inspectorName)}</span>` : ""}<span>${esc(item.id)}</span></div></div><div class="case-row-side"><strong>${currency(expected(item))}</strong><small>${currency(received(item))} recibido</small><button type="button" class="text-action" data-open-case="${esc(item.id)}">Abrir caso <i data-lucide="arrow-right"></i></button></div></article>`;
   }
 
   function renderDashboard() {
@@ -326,9 +398,9 @@ button { cursor: pointer; }
 
   function renderNav() {
     const active = state.reportOpen ? "review" : current().phase;
-    const activePhases = captureOnly() ? phases.filter(phase => phase.id === "capture" || phase.id === "review") : phases;
+    const activePhases = captureOnly() ? phases.filter(phase => ["capture", "office"].includes(phase.id)) : phases;
     const activeIndex = activePhases.findIndex(phase => phase.id === active);
-    $("#phase-nav").innerHTML = activePhases.map((phase, index) => `<button type="button" class="phase-link ${phase.id === active ? "active" : index < activeIndex ? "done" : ""}" data-phase="${phase.id}"><span class="phase-number">${index < activeIndex ? "✓" : index + 1}</span>${esc(phase.label)}</button>`).join("");
+    $("#phase-nav").innerHTML = activePhases.map((phase, index) => `<button type="button" class="phase-link ${phase.id === active ? "active" : index < activeIndex ? "done" : ""}" data-phase="${phase.id}" ${index > activeIndex ? "disabled" : ""}><span class="phase-number">${index < activeIndex ? "✓" : index + 1}</span>${esc(phase.label)}</button>`).join("");
   }
 
   function render(preserveScroll = false) {
@@ -413,12 +485,13 @@ button { cursor: pointer; }
     return new Promise(resolve => canvas.toBlob(blob => resolve(blob || file), "image/jpeg", .82));
   }
   async function addPhotos(files) {
+    const category = $("#photo-category")?.value || "Sin clasificar";
     for (const file of files) {
-      if (photos.length >= 8) { toast("Puedes cargar hasta 8 fotografías."); break; }
+      if (photos.length >= 24) { toast("Puedes cargar hasta 24 fotografías."); break; }
       if (!["image/jpeg", "image/png", "image/webp"].includes(file.type) || file.size > 10_000_000) { toast("Usa JPG, PNG o WebP de hasta 10 MB por imagen."); continue; }
       try {
         const blob = await compress(file);
-        const row = { id: uid(), caseId: state.id, name: file.name.slice(0, 120), blob };
+        const row = { id: uid(), caseId: state.id, name: file.name.slice(0, 120), category, blob };
         photos.push({ ...row, url: photoUrl(blob) });
         await persistPhoto(row);
       } catch { toast("No pudimos leer una imagen. Intenta con otra."); }
@@ -427,7 +500,7 @@ button { cursor: pointer; }
   }
 
   function section(title, phase, ids) {
-    const fields = ids.filter(id => visible().some(question => question.id === id)).map(id => {
+    const fields = ids.filter(id => questions.some(question => question.id === id && (!question.when || question.when()))).map(id => {
       const question = questions.find(item => item.id === id);
       const value = answers[id];
       const displayed = Array.isArray(value) ? value.join(", ") : question.type === "date" ? formatDate(value) : value ? `${question.unit === "RD$" ? "RD$ " : ""}${value}${question.unit && question.unit !== "RD$" ? ` ${question.unit}` : ""}` : "Pendiente";
@@ -442,8 +515,10 @@ button { cursor: pointer; }
     const shared = `<div class="report-head"><img src="${esc(LOGO_SRC)}" alt="Migo"><div><strong>${heading}</strong><small>${esc(state.id)}</small><small>${new Date().toLocaleDateString("es-DO", { day: "2-digit", month: "long", year: "numeric" })}</small></div></div><div class="report-warning">${captureOnly() ? "Ficha de datos para seguimiento de la oficina. No constituye una inspección ni una tasación certificada." : "Levantamiento preliminar del inmueble. No constituye tasación certificada ni verificación legal del título. La oficina debe revisar datos, evidencias y comparables antes de preparar el informe final para firma profesional."}${missing.length ? ` <strong>${missing.length} dato${missing.length === 1 ? "" : "s"} pendiente${missing.length === 1 ? "" : "s"}.</strong>` : ""}${answers.consent !== "Sí" ? " <strong>Debes confirmar la autorización del cliente antes de compartir el expediente.</strong>" : ""}</div>${section("01 · Participación e ingresos", "capture", ["workMode", "associateName", "associateCode", "captureFee", "inspectionFee", "amountReceived"])}${section("02 · Cliente e inmueble", "capture", ["source", "clientName", "clientPhone", "consent", "clientEmail", "purpose", "propertyType", "city", "sector"])}`;
     if (captureOnly()) return `<article class="report-sheet" id="report-sheet">${shared}</article>`;
     const comps = state.comparables.length ? `<table class="report-comparables"><thead><tr><th>Ubicación</th><th>Precio solicitado</th><th>Área</th><th>Fuente</th></tr></thead><tbody>${state.comparables.map(item => `<tr><td>${esc(item.address)}</td><td>RD$ ${number(item.price)}</td><td>${number(item.area)} m²</td><td>${esc(item.source || "Pendiente")}</td></tr>`).join("")}</tbody></table>` : `<p class="report-caveat">No se registraron comparables.</p>`;
-    const images = photos.length ? `<div class="report-photos">${photos.map(photo => `<figure><img src="${photo.url}" alt="${esc(photo.name)}"><figcaption>${esc(photo.name)}</figcaption></figure>`).join("")}</div>` : `<p class="report-caveat">Fotografías pendientes de cargar.</p>`;
-    return `<article class="report-sheet" id="report-sheet">${shared}${section("03 · Coordinación de visita", "visit", ["address", "visitDate", "siteContact", "access", "coordinates"])}${section("04 · Características del inmueble", "inspection", ["occupancy", "landArea", "hasBuilding", "builtArea", "titleArea", "levels", "age", "bedrooms", "bathrooms", "parkingCount", "parkingType", "parkingArea", "structure", "roof", "finishes", "condition", "utilities", "amenities", "observations"])}${section("05 · Documentos observados", "evidence", ["documents"])}<section class="report-section"><div class="report-section-title"><h2>06 · Comparables de mercado</h2><button type="button" data-edit="comparables">Editar</button></div>${comps}</section><section class="report-section"><div class="report-section-title"><h2>07 · Registro fotográfico</h2><button type="button" data-edit="photos">Editar</button></div>${images}</section><section class="report-section"><h2>Revisión y firma profesional</h2><div class="report-signature"></div><p class="report-caveat">Revisado por: ____________________ &nbsp; Fecha: ____________________</p><p class="report-caveat">Las conclusiones de valor y la certificación, si corresponden, se preparan y firman posteriormente por el profesional autorizado.</p></section></article>`;
+    const images = photos.length ? `<div class="report-photos">${photos.map(photo => `<figure><img src="${photo.url}" alt="${esc(photo.category || photo.name)}"><figcaption>${esc(photo.category || "Sin clasificar")} · ${esc(photo.name)}</figcaption></figure>`).join("")}</div>` : `<p class="report-caveat">Fotografías pendientes de cargar.</p>`;
+    const officeFields = [["Fecha de visita", formatDate(answers.visitDate)], ["Hora", answers.visitTime], ["Monto acordado con cliente", answers.clientPrice ? currency(answers.clientPrice) : "Pendiente"], ["Inspector asignado", answers.inspectorName]];
+    const office = `<section class="report-section"><div class="report-section-title"><h2>03 · Coordinación de oficina</h2><button type="button" data-edit-phase="office">Editar</button></div><div class="report-grid">${officeFields.map(([label, value]) => `<div class="report-field ${!value || value === "Pendiente" ? "missing" : ""}"><small>${esc(label)}</small><strong>${esc(value || "Pendiente")}</strong></div>`).join("")}</div></section>`;
+    return `<article class="report-sheet" id="report-sheet">${shared}${office}${section("04 · Ubicación y entorno", "visit", ["address", "siteContact", "access", "coordinates", "neighborhood", "nearby", "highestUse", "neighborhoodNotes"])}${section("05 · Distribución y áreas", "inspection", ["occupancy", "landArea", "hasBuilding", "builtArea", "titleArea", "levels", "age", "bedrooms", "bathrooms", "parkingCount", "parkingType", "parkingArea"])}${section("06 · Instalaciones y amenidades", "inspection", ["intercom", "waterStorage", "waterStorageDetails", "security", "elevator", "socialArea", "utilities", "amenities"])}${section("07 · Materiales y conservación", "inspection", ["structure", "roof", "floorFinish", "kitchenWood", "kitchenFinish", "finishes", "finishDetails", "condition", "defects", "defectDetails", "observations"])}${section("08 · Documentos observados", "evidence", ["documents"])}<section class="report-section"><div class="report-section-title"><h2>09 · Comparables de mercado</h2><button type="button" data-edit="comparables">Editar</button></div>${comps}</section><section class="report-section"><div class="report-section-title"><h2>10 · Registro fotográfico</h2><button type="button" data-edit="photos">Editar</button></div>${images}</section><section class="report-section"><h2>Revisión y firma profesional</h2><div class="report-signature"></div><p class="report-caveat">Revisado por: ____________________ &nbsp; Fecha: ____________________</p><p class="report-caveat">Las conclusiones de valor y la certificación, si corresponden, se preparan y firman posteriormente por el profesional autorizado.</p></section></article>`;
   }
 
   function renderReport() {
@@ -486,8 +561,59 @@ button { cursor: pointer; }
     window.open(`https://wa.me/${OFFICE_WHATSAPP}?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
   }
 
-  function jump(id) { if (!visible().some(question => question.id === id)) return; state.stepId = id; state.reportOpen = false; manualOpen = false; save(); render(); }
-  function jumpPhase(id) { const question = visible().find(item => item.phase === id); if (question) jump(question.id); }
+  function sendCapture() {
+    if (captureMissing().length || answers.consent !== "Sí") { toast("Completa los datos del cliente y confirma su autorización antes de enviarlos."); return; }
+    const lines = ["Hola, oficina de Tasalo con Migo. Presento un cliente para tasación:", `Caso: ${state.id}`, `Asociado: ${answers.associateName || "Pendiente"}`, `Participación prevista: ${answers.workMode || "Pendiente"}`, `Cliente: ${answers.clientName}`, `Celular: ${answers.clientPhone}`, `Correo: ${answers.clientEmail || "No indicado"}`, `Finalidad: ${answers.purpose || "No indicada"}`, `Inmueble: ${answers.propertyType}`, `Zona: ${[answers.sector, answers.city].filter(Boolean).join(", ")}`, "Favor contactar al cliente, acordar el precio, confirmar fecha y hora y asignar al inspector."];
+    window.open(`https://wa.me/${OFFICE_WHATSAPP}?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener");
+  }
+
+  function submitCapture() {
+    const missing = captureMissing();
+    if (missing.length) { toast(`Completa primero: ${missing[0].label}.`); return; }
+    if (answers.consent !== "Sí") { toast("Confirma la autorización del cliente antes de entregar sus datos a la oficina."); return; }
+    state.captureSubmittedAt = new Date().toISOString();
+    state.stage = "office";
+    state.stepId = "office";
+    save(); render();
+  }
+
+  function submitOffice(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    const required = ["visitDate", "visitTime", "clientPrice", "inspectorName"];
+    const values = Object.fromEntries(data.entries());
+    if (required.some(key => !String(values[key] || "").trim()) || Number(values.clientPrice) <= 0) { $("#office-error").textContent = "Completa fecha, hora, precio e inspector confirmados por la oficina."; return; }
+    if (data.has("assignedToMe") && answers.workMode === "Solo captación") { $("#office-error").textContent = "Este caso está registrado como solo captación. Cambia la participación antes de asignarte la inspección."; return; }
+    if (data.has("assignedToMe") && String(values.inspectorName).trim().toLocaleLowerCase() !== String(answers.associateName || "").trim().toLocaleLowerCase()) { $("#office-error").textContent = "Si tú harás la visita, el inspector asignado debe coincidir con tu nombre de asociado."; return; }
+    for (const key of ["visitDate", "visitTime", "clientPrice", "inspectorName", "captureFee", "inspectionFee", "amountReceived"]) {
+      if (key in values && String(values[key]).trim()) answers[key] = String(values[key]).trim();
+      else delete answers[key];
+    }
+    answers.assignedToMe = data.has("assignedToMe") ? "Sí" : "No";
+    if (captureOnly()) { delete answers.inspectionFee; answers.assignedToMe = "No"; }
+    if (answers.workMode === "Solo inspección") delete answers.captureFee;
+    state.coordinationConfirmedAt = new Date().toISOString();
+    save(); render(); toast("Coordinación registrada en este dispositivo.");
+  }
+
+  function startInspection() {
+    if (!state.coordinationConfirmedAt || answers.assignedToMe !== "Sí") { toast("La oficina debe confirmar la asignación antes de iniciar la inspección."); return; }
+    state.stage = "inspection";
+    state.stepId = questions.some(question => question.id === state.stepId && ["visit", "inspection", "evidence", "review"].includes(question.phase)) ? state.stepId : "address";
+    state.inspectionStartedAt ||= new Date().toISOString();
+    save(); render();
+  }
+
+  function jump(id) {
+    const target = questions.find(question => question.id === id);
+    if (!target) return;
+    if (target.phase === "capture") state.stage = "capture";
+    else if (target.phase === "office") { if (!state.captureSubmittedAt) return; state.stage = "office"; }
+    else { if (!state.coordinationConfirmedAt && !state.inspectionStartedAt && !state.legacyInspection) return; state.stage = "inspection"; }
+    if (!visible().some(question => question.id === id)) return;
+    state.stepId = id; state.reportOpen = false; manualOpen = false; save(); render();
+  }
+  function jumpPhase(id) { const question = questions.find(item => item.phase === id && (!item.when || item.when())); if (question) jump(question.id); }
 
   $("#question-panel").addEventListener("click", event => {
     const choice = event.target.closest("[data-choice]"); if (choice) return select(choice.dataset.choice);
@@ -499,9 +625,13 @@ button { cursor: pointer; }
     const photo = event.target.closest("[data-delete-photo]"); if (photo) { const index = photos.findIndex(item => item.id === photo.dataset.deletePhoto); if (index >= 0) { URL.revokeObjectURL(photos[index].url); photos.splice(index, 1); erasePhoto(photo.dataset.deletePhoto).then(() => { save(); render(); }); } return; }
     if (event.target.closest("[data-geolocate]")) { if (!navigator.geolocation) { toast("La ubicación no está disponible en este navegador."); return; } navigator.geolocation.getCurrentPosition(position => { $("#answer-input").value = `${position.coords.latitude.toFixed(6)}, ${position.coords.longitude.toFixed(6)}`; toast("Ubicación registrada. Pulsa Continuar."); }, () => toast("No se pudo obtener la ubicación. Puedes escribirla manualmente."), { enableHighAccuracy: true, timeout: 10000 }); return; }
     if (event.target.closest("[data-report]")) { state.reportOpen = true; save(); render(); return; }
+    if (event.target.closest("[data-capture-whatsapp]")) return sendCapture();
+    if (event.target.closest("[data-submit-capture]")) return submitCapture();
+    if (event.target.closest("[data-start-inspection]")) return startInspection();
+    if (event.target.closest("[data-back-capture]")) return jump("workMode");
     const edit = event.target.closest("[data-edit]"); if (edit) jump(edit.dataset.edit);
   });
-  $("#question-panel").addEventListener("submit", event => { if (event.target.matches("[data-answer-form]")) submitAnswer(event); else if (event.target.matches("[data-custom-form]")) submitCustom(event); else if (event.target.id === "comparable-form") addComparable(event); });
+  $("#question-panel").addEventListener("submit", event => { if (event.target.matches("[data-answer-form]")) submitAnswer(event); else if (event.target.matches("[data-custom-form]")) submitCustom(event); else if (event.target.id === "comparable-form") addComparable(event); else if (event.target.id === "office-form") submitOffice(event); });
   $("#question-panel").addEventListener("change", event => { if (event.target.id === "photo-input") addPhotos(Array.from(event.target.files || [])); });
   $("#report").addEventListener("click", event => { const edit = event.target.closest("[data-edit]"); if (edit) return jump(edit.dataset.edit); const phase = event.target.closest("[data-edit-phase]"); if (phase) return jumpPhase(phase.dataset.editPhase); if (event.target.closest("[data-print]")) return window.print(); if (event.target.closest("[data-share]")) return shareReport(); if (event.target.closest("[data-whatsapp]")) return sendSummary(); if (event.target.closest("[data-mark-sent]")) { if (answers.consent !== "Sí") return toast("Confirma la autorización del cliente antes de marcar el envío."); state.sentAt = state.sentAt ? null : new Date().toISOString(); save(); renderReport(); return; } if (event.target.closest("[data-download-json]")) return download(new Blob([JSON.stringify({ id: state.id, createdAt: state.createdAt, answers, comparables: state.comparables, photoNames: photos.map(photo => photo.name) }, null, 2)], { type: "application/json" }), `${state.id}.json`); });
   $("#phase-nav").addEventListener("click", event => { const phase = event.target.closest("[data-phase]"); if (phase) jumpPhase(phase.dataset.phase); });
